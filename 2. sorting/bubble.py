@@ -12,7 +12,6 @@ import numpy as np
 from typing import Iterable
 
 from exec_time import timeit
-from constants import *
 
 
 @timeit
@@ -28,19 +27,3 @@ def bubble_sort(values: Iterable) -> None:
 
         if not swapped:
             return
-
-
-@timeit
-def np_sort(values: Iterable) -> None:
-    np_arr = np.array(values)
-    np_arr.sort()
-
-
-def main():  
-    list_to_sort = deepcopy(SMALL_LIST)
-    np_sort(list_to_sort) 
-    bubble_sort(list_to_sort)
-    
-
-if __name__ == '__main__':
-    main()   
